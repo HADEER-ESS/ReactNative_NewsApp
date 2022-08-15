@@ -10,7 +10,7 @@ export default function Search() {
     const [data, setData] = useState([]);
     const [refresh , setRefresh] = useState(false)
     const URL =
-    'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=afd43f2dcff64ea5b649e5477ebca914';
+    'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=afd43f2dcff64ea5b649e5477ebca914';
 
   useEffect(() => {
     setRefresh(true)
