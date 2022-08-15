@@ -8,7 +8,7 @@ export default function Header({title}){
     const navigation = useNavigation()
     const {setSearchInput} = useContext(searchContext)
     const navigateToHome = () => {
-        setSearchInput("")
+        setSearchInput(null)
         navigation.goBack()
     }
     return(

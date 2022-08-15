@@ -33,13 +33,13 @@ export default function Search() {
         <View>
         <View style={{flexDirection:'row' , alignItems:'center' , borderColor:"#666" , borderWidth:1 , borderRadius:20 , margin:11, backgroundColor:"#fff" , height:37}}>
         <MaterialIcons name="search" size={18} color="#666" style={{paddingHorizontal:7}}/>
-        <TextInput placeholder="search with title" value={SearchInput} onChangeText={val=>renderChange(val)}/>
+        <TextInput placeholder="Search by title" value={SearchInput} onChangeText={val=>renderChange(val)} style={{justifyContent:'center' , alignItems:"center"}}/>
         </View>
         <View style={{ height:0.5 , backgroundColor:"#666"}}></View>
         {
           !refresh?
           <ScrollView refreshControl={<RefreshControl refreshing={refresh}/>}>
-          {SearchInput==='' ? <Card data={data}/> : <Card data={SearchedData}/>}
+          {SearchInput===null ? <Card data={data}/> : <Card data={SearchedData}/>}
           </ScrollView>:
           <ActivityIndicator color="#000" size="large"/>
         }
