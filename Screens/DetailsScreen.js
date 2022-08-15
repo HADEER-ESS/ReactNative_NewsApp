@@ -5,13 +5,6 @@ import Header from "../Component/Header";
 
  export default class DetailsScreen extends React.Component{
      state = {itemData : this.props.route.params}
-    //  componentDidMount(){
-    //      console.log(this.state.itemData.image)
-    //      console.log(this.state.itemData.auther)
-    //      console.log(this.state.itemData.date)
-    //      console.log(this.state.itemData.title)
-    //      console.log(this.state.itemData.content)
-    //  }
      render(){
         let {auther , date , title , content , image , name} = this.state.itemData
          return(
